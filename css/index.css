@@ -1,0 +1,745 @@
+:root {
+    --background-color: #D2CDB9;
+    --primary-color: #ffffff;
+    --secondary-color: #eae259;
+    --font-size: 16px;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: #e0e0e0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding-bottom: 0 !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100vw;
+    height: 7vh;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background: radial-gradient(circle, #ffffff00, #a40000cd);
+}
+
+header .quocKy {
+    width: 75px;
+    height: auto;
+    margin-left: 10px;
+}
+
+header .logo-50-nam {
+    width: 5vw;
+    max-width: 150px;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.section-one {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /* color: white; */
+}
+
+.section-one img:nth-child(1) {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.section-one img:nth-child(2) {
+    left: -10%;
+    top: -10%;
+    position: absolute;
+    opacity: 0.2;
+    width: 80%;
+    mix-blend-mode: multiply;
+    animation: abcde 50s linear infinite;
+}
+
+@keyframes abcde {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.section-one img:nth-child(3) {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.section-one .ss1-txt {
+    top: 40%;
+    position: absolute;
+    left: 12%;
+}
+
+.section-one .ss1-txt h1 {
+    color: rgb(255, 0, 0);
+    font-size: 54px;
+    text-shadow: 5px 5px 8px #00000070;
+}
+
+.section-one .ss1-txt h2 {
+    margin-top: 35px;
+    color: rgb(212, 255, 0);
+    font-size: 40px;
+    text-shadow: 3px 3px 4px #660303c0;
+}
+
+.section-one .ss1-txt p {
+        margin-top: 15px;
+    color: rgba(1, 0, 0, 0.887);
+    font-size: 20px;
+    text-shadow: 3px 3px 4px #39290662;
+    font-weight: 500;
+}
+
+/* Section two */
+.section-two {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 13vh;
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+
+}
+
+.section-two::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/unnamed.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+.section-two>h1 {
+    position: absolute;
+    top: 10px;
+    z-index: 11;
+    width: 100%;
+    color: #324401d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.section-two h1 img {
+    width: 67px;
+    padding-right: 20px;
+}
+
+.section-two .row {
+    padding-top: 0;
+    margin: -5vh;
+}
+
+.section-two .col-6:nth-child(1) .text-two-l-a {
+    width: 29%;
+    height: 45%;
+    font-size: 13px;
+    margin: 50px !important;
+    margin-top: 200px;
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    bottom: 0%;
+    left: 26%;
+}
+
+.section-two .text-two-l-a img {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -8;
+    filter: drop-shadow(4px 4px 8px #5d5555ac);
+}
+
+.section-two .col-6:nth-child(1) .text-two-l-b {
+    width: 29%;
+    height: 45%;
+    font-size: 13px;
+    margin: 50px !important;
+    margin-top: 200px;
+    position: absolute;
+    padding: 10px 30px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    bottom: 42%;
+    left: 11%;
+}
+
+.section-two .text-two-l-b img {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -8;
+    filter: drop-shadow(4px 4px 8px #5d5555ac);
+}
+
+.section-two .painImg-l {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-two .text-two-l-a span,
+.section-two .text-two-l-b span {
+    color: rgb(237, 131, 50);
+    font-size: 14.5px;
+    font-weight: 430;
+}
+
+.section-two .text-two-l-a p,
+.section-two .text-two-l-b p {
+    text-indent: 15px;
+}
+
+.section-two .painImg-l img {
+    position: absolute;
+}
+
+.section-two .painImg-l img:nth-child(1) {
+    bottom: -0%;
+    right: -1%;
+    z-index: -9;
+    width: 43%;
+    height: 70%;
+    border-radius: 17px;
+    filter: blur(1px);
+}
+
+.section-two .painImg-l img:nth-child(2) {
+    position: absolute;
+    top: 15%;
+    left: 43%;
+    z-index: 0;
+    width: 15%;
+    border-radius: 1500px;
+    height: 23%;
+
+    border-radius: 17px;
+    filter: drop-shadow(4px 4px 8px #000000b8);
+}
+
+.section-two .painImg-l .dt-ltt::after {
+    content: "Đại tướng";
+    width: 100px;
+    height: 15px;
+    left: 50%;
+    position: absolute;
+    top: 38.5%;
+    left: 46.5%;
+    color: #f4eb70c2;
+    text-shadow: -3px 2px 4px #000000b9;
+}
+
+.section-two .painImg-l .dt-ltt::before {
+    content: "Lê Trọng Tấn";
+    width: 150px;
+    height: 15px;
+    left: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 40.5%;
+    left: 45%;
+    text-shadow: -3px 2px 4px #ffffffb4;
+}
+
+.section-two .painImg-l .dt-vtd::after {
+    content: "Đại tướng";
+    width: 100px;
+    height: 15px;
+    position: absolute;
+    bottom: 15.5%;
+    left: 20%;
+    z-index: 1;
+    color: #f4eb70c2;
+    text-shadow: -3px 2px 4px #000000b9;
+}
+
+.section-two .painImg-l .dt-vtd::before {
+    content: "Văn Tiến Dũng";
+    width: 150px;
+    height: 15px;
+    bottom: 13.3%;
+    left: 17.5%;
+    z-index: 1;
+    position: absolute;
+    text-shadow: 3px 2px 4px #ffffffb4;
+}
+
+.section-two .painImg-l .tbt-ld::after {
+    content: "Tổng Bí thư";
+    width: 150px;
+    height: 15px;
+    position: absolute;
+    bottom: 17%;
+    left: 18.5%;
+    z-index: 1;
+    color: #f4eb70c2;
+    text-shadow: -3px 2px 4px #000000b9;
+}
+
+.section-two .painImg-l .tbt-ld::before {
+    content: "Lê Duẩn";
+    width: 150px;
+    height: 15px;
+    bottom: 15%;
+    left: 21%;
+    z-index: 1;
+    position: absolute;
+    text-shadow: -4px 4px 4px #ffffffb4;
+}
+
+.section-two .painImg-l .dt-vng::after {
+    content: "Đại tướng";
+    width: 150px;
+    height: 15px;
+    position: absolute;
+    top: 38.5%;
+    left: 46.5%;
+    z-index: 1;
+    color: #f4eb70c2;
+    text-shadow: -3px 2px 4px #000000b9;
+}
+
+.section-two .painImg-l .dt-vng::before {
+    content: "Võ Nguyên Giáp";
+    width: 150px;
+    height: 15px;
+    top: 40.5%;
+    left: 43.5%;
+    z-index: 1;
+    position: absolute;
+    text-shadow: 3px 2px 4px #ffffffb4;
+}
+
+.section-two .painImg-l img:nth-child(3) {
+    position: absolute;
+    bottom: 15%;
+    left: 16.5%;
+    z-index: 0;
+    width: 15%;
+    border-radius: 1500px;
+    height: 25%;
+    border-radius: 17px;
+    filter: drop-shadow(4px 4px 8px #000000b8);
+}
+
+.section-two .col-6:nth-child(2) .text-two-r {
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+}
+
+.section-two .col-6:nth-child(2) .text-two-r .text-two-bgr img {
+    position: absolute;
+    width: 80%;
+    height: 84vh;
+    background-size: cover;
+    top: 0px;
+    left: 0;
+    z-index: -9;
+}
+
+.section-two .col-6:nth-child(2) .painImg-r h1 {
+    font-size: 23px;
+    color: #1d3004d7;
+    font-weight: 1000;
+    line-height: 1em;
+    word-spacing: -0.3em;
+    width: auto;
+    display: inline-block;
+    padding: 5px 80px 5px 70px;
+    clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+    background: linear-gradient(to right, #eceec4, #eaeac6af);
+}
+
+.section-two .col-6:nth-child(2) .text-two-r .text-r-box {
+    padding: 10px 17px;
+}
+
+.text-two-r .text-r-box .title {
+    width: 80%;
+    position: relative;
+}
+
+.text-two-r .text-r-box .title h3,
+.text-two-r .text-r-box .list h3 {
+    font-size: 20px;
+}
+
+.text-two-r .text-r-box .title>div {
+    display: flex;
+    width: 100%;
+}
+
+.text-two-r .text-r-box .title>div>p span {
+    float: left;
+    font-family: "Permanent Marker", cursive;
+    font-size: 60px;
+    color: rgba(239, 72, 72, 0.845);
+    font-weight: 0;
+    margin-right: 5px;
+    line-height: 1;
+    height: 60px;
+    display: flex;
+}
+
+.text-two-r .text-r-box .title>div>p {
+    width: 50%;
+}
+
+.text-two-r .text-r-box .title>div>div {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.text-two-r .text-r-box .title>div>div::after {
+    content: "Tương quan lực lượng:";
+    position: absolute;
+    width: 200px;
+    height: 15px;
+    top: 13px;
+    font-size: 15px;
+}
+
+.text-two-r .text-r-box .title>div>div p {
+    width: 49%;
+    padding: 7px 5px;
+}
+
+.text-two-r .text-r-box .title>div>div p:nth-child(1) {
+    background-color: #355012d7;
+    color: white;
+}
+
+.text-two-r .text-r-box .title>div>div p:nth-child(2) {
+    background-color: #bfc170d7;
+}
+
+.text-two-r .text-r-box .list {
+    width: 80%;
+}
+
+.text-two-r .text-r-box .list ul {
+    margin-top: 20px;
+}
+
+.text-two-r .text-r-box .list ul li {
+    margin-top: -10px;
+}
+
+.text-two-r .text-r-box .list ul li p {
+    line-height: 18px;
+    padding-left: 10px;
+}
+
+.text-two-r .text-r-box .list ul li span {
+    float: left;
+    font-family: "Permanent Marker", cursive;
+    font-size: 33px;
+    color: rgba(0, 0, 0, 0.796);
+    font-weight: 0;
+    margin-right: 5px;
+    line-height: 1;
+    height: 30px;
+    display: flex;
+}
+
+.to-none {
+    animation: toNone 1s 1;
+}
+
+@keyframes toNone {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.none-to {
+    animation: none-to 1s 1;
+}
+
+@keyframes none-to {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section three */
+.section-three {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.section-three>h1 {
+    width: 100%;
+    height: 7%;
+    background: linear-gradient(to left, #0077B6, #90E0EF, #0077B6);
+
+}
+
+.section-three>h1::after {
+    content: "CÁI GIÁ CỦA SỰ HÒA BÌNH";
+    font-size: 40px;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffffce;
+    text-shadow: 5px 6px 7px #000000b4;
+}
+
+.section-three .ss3-l {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    padding-top: 7vh;
+    /* left: 0; */
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+    background: linear-gradient(to top, #ea6464, #ffffff);
+}
+
+.section-three .ss3-l::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(95% 0, 100% 0%, 5% 100%, 0% 100%);
+    width: 42.2%;
+    top: 0;
+    right: -2px;
+    z-index: 1;
+    height: 100%;
+    background: linear-gradient(-60deg, #f89b9b, #fafafa);
+}
+
+.section-three .ss3-r {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -3;
+}
+
+.section-three .ss3-r img {
+    position: absolute;
+    top: 7%;
+    right: 0;
+    width: 75%;
+    z-index: -9;
+}
+
+
+.section-three .ss3-r .text-r {
+    position: absolute;
+    z-index: 100;
+    width: 70%;
+    height: 35%;
+    bottom: 10px;
+    right: 30px;
+}
+
+#textSs3 {
+    font-size: 17px;
+    font-family: sans-serif;
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: inline-block;
+    min-width: 10px;
+    text-shadow: 2px 3px 4px #3630307c;
+}
+
+
+
+
+#audioSs3 {
+    position: absolute;
+    top: -40px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    right: 10%;
+    z-index: 10;
+    background-color: rgba(196, 49, 49, 0.5);
+    border-radius: 7px;
+}
+
+.section-three .ss3-l .ss3-box {
+    width: 100%;
+    display: flex;
+    height: 22%;
+    position: relative;
+    margin: 0 !important;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.698);
+    background: linear-gradient(to left, #000000, #0077B6);
+}
+
+.section-three .ss3-l .ss3-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: linear-gradient(to left, #000000, #0077B6);
+}
+
+.section-three .ss3-l .ss3-box img {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.section-three .ss3-l .ss3-box img:nth-child(2) {
+    height: 100%;
+    left: 3%;
+    z-index: 0;
+    opacity: 0.4;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.section-three .ss3-l .ss3-box p {
+    width: 190%;
+    padding: 20px 10px;
+    padding-left: 27%;
+    display: flex;
+    align-items: center;
+    text-indent: 15px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 5px 6px 7px #000000ca;
+}
+
+.section-three .ss3-l .ss3-box-b {
+    width: 70%;
+    display: flex;
+    height: 34%;
+    position: relative;
+    justify-content: space-around;
+    margin: 0 !important;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.698);
+    background: linear-gradient(to left, #f46b6ba7, #f801016a, transparent);
+}
+
+.section-three .ss3-l .ss3-box-b img:nth-child(2) {
+    transform: scaleX(-1);
+    opacity: 0.7;
+    width: 34%;
+    height: 120%;
+    margin-top: -7.5%;
+    filter: drop-shadow(4px 4px 5px #00000078);
+}
