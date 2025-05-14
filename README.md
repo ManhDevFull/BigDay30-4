@@ -1,12 +1,12 @@
 # Website : Kỷ niệm 50 năm giải phóng
 
-## Demo
+## Demo  
+URL demo:  
+https://big-day30-4.vercel.app/
+
 Video demo:  
 
 [![Video demo](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot1-min.png)](https://drive.google.com/file/d/1X4o3bLpPBJI3IlrR6WAxMw4NmLotuFNf/view?usp=sharing)  
-
-URL demo:  
-https://big-day30-4.vercel.app/
 
 Ảnh demo:  
 Screen1:  
