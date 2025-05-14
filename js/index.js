@@ -531,7 +531,7 @@ function setOutText() {
         imgTag[2].classList.add('fadeInLeft')
         divTag[0].classList.add('dt-vng')
         divTag[1].classList.add('tbt-ld')
-    }, 1000)
+    }, 900)
 
 }
 // function setInText(){}
