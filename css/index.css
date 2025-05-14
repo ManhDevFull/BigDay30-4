@@ -143,6 +143,28 @@ header .logo-50-nam {
     right: 0;
     height: 100%;
 }
+#section-one-next{
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    left: 30%;
+    height: 80px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section-one-next button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    color: rgba(33, 12, 12, 0.679);
+    text-shadow: 7px 7px 10px #000000ca;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+}
 
 .section-one .ss1-txt {
     top: 40%;
