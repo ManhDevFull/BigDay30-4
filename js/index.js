@@ -6,23 +6,22 @@ const textToType = `"Chiến tranh, theo tôi biết, có nhiều người nhói
 let i = 0;
 let currentText = '';
 let index = 0;
-let hasChanged = false;
-let isAtBottom = false;
-let isSection2 = false
-let isSection3 = false
 let isPlay = false;
 
 const txtRBox = document.getElementById('text-r-box')
 let isTyping = true;
 let isInitialPhase = true;
-let section1 = ` <div class="trongDong"></div>
-        <h1>Kỷ niệm 50 năm<br> Giải phóng Miền Nam - Thống nhất Đất nước</h1>
-        <h2>30/04/1975 - 30/04/2025</h2>
-        <p id="typing-text" class="typing-text"></p>
-        <div class="button-container" id="section-one-next">
-            <button>Tìm hiểu thêm
-
-            </button> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20px"
+let section1 = `  <img src="./images/ss1-l.png" alt="ss1-l">
+        <img src="./images/e4b318059a7824c886901e16d341eb5f.jpg" alt="td">
+        <img src="./images/ss1-r.png" alt="ss1-l">
+        <div class="ss1-txt wow slideInLeft">
+            <h1>Kỷ niệm 50 năm<br> Giải phóng Miền Nam - Thống nhất Đất nước</h1>
+            <h2>30/04/1975 - 30/04/2025</h2>
+            <p id="typing-text" class="typing-text"></p>
+        </div>
+        <div id="section-one-next" class="btn-container">
+            <button>Tìm hiểu thêm<br>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="20px"
                 width="20px" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708">
@@ -30,7 +29,7 @@ let section1 = ` <div class="trongDong"></div>
                 <path fill-rule="evenodd"
                     d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708">
                 </path>
-            </svg>
+            </svg></button>
         </div>`
 let section2_Old = `  <div class="title">
                             <h3>Tổng quan</h3>
@@ -223,60 +222,7 @@ let section2_New = ` <div class="title">
                                 </li>
                             </ul>
                         </div>`
-let section3 = ` <div class="row">
-            <div class="col-6">
-
-                <div class="text-two-l-a wow fadeInRight">
-                    <div class="bgr-img-l"><img src="./images/background-giay-bao-cu-dep-nhat_080332437.jpg" alt="bgr">
-                    </div>
-                    <p>
-                        <span>Tổng Bí thư Lê Duẩn:</span><br> "Chúng ta chào mừng Tổ quốc vinh quang của chúng ta từ nay
-                        vĩnh viến thoát khỏi ách nô dịch của nước ngoài, vĩnh viễn thoát khỏi họa chia cắt, chào mừng
-                        non sông gấm vốc Việt Nam liền một dải".
-                    </p>
-                    <p>
-                        <span>Phóng viên Don North (ABC News):</span><br>"Khi chiếc xe tăng lao qua cánh cổng sắt, tôi
-                        biết mình đang chứng kiến một giây phút lịch sử không chỉ của Việt Nam mà của cả thế giới".
-                    </p>
-                </div>
-                <div class="text-two-l-b wow fadeInLeft">
-                    <div class="bgr-img-l"><img src="./images/background-giay-bao-cu-dep-nhat_080332437.jpg" alt="bgr">
-                    </div>
-                    <p>
-                        <span>Đại tướng Võ Nguyên Giáp:</span><br>"Ngày toàn thắng 30 tháng 4 năm 1975 đi vào lịch sử
-                        như một sự kết thúc chiến lược vô song. Tổ quốc ta hoàn toàn đọc lập, thống nhất".
-                    </p>
-                    <p>
-                        <span>Đại tướng Lê Đức Anh:</span><br>"Không chỉ có xe tăng vào Dinh, mà cả 5 hướng, cả lực
-                        lượng tại chổ, đều cùng một lúc đội bão lửa vào sào huyệt cuối cùng của kẻ địch".
-                    </p>
-                    <p>
-                        <span>Hãng Reuters(Anh):</span><br>"Khi chiếc cổng sắt tại Dinh Độc Lập bị xe tăng Quân Giải
-                        phóng húc đổ... cờ ba sọc rơi xuống đất, cờ Giải phóng tung bay từ tầng hai"
-                    </p>
-                </div>
-                <div class="painImg-l">
-                    <img src="./images/image.png" alt="bgr">
-                    <img class=" wow flipInY" src="./images/LanhDao/Dai-tuong-Vo-Nguyen-Giáp.png"
-                        alt="Dai-tuong-Le-Trong-Tan">
-                    <img class=" wow unflipInY" style="height: 20%; bottom: 20%;"
-                        src="./images/LanhDao/Tong-bi-thu-Le-Duan.png" alt="Dai-tuong-Van-Tien-Dung">
-                    <div class="dt-vng"></div>
-                    <div class="tbt-ld"></div>
-                </div>
-            </div>
-            <div class="col-6" id="txt-section-two">
-                <div class="painImg-r">
-                    <h1 class="wow animated fadeInLeft" id="titleH1">
-                        CHÍNH QUYỀN SÀI GÒN ĐẦU HÀNG VÔ ĐIỀU KIỆN<br>[30/4/1975]
-                    </h1>
-                </div>
-                <div class="text-two-r">
-                    <div class="text-two-bgr"><img src="./images/background-giay-bao-cu-dep-nhat_080332437.jpg"
-                            alt="bgr">
-                    </div>
-
-                    <div class="wow text-r-box none-to" id="text-r-box">
+let section3 = `
                         <div class="title">
                             <h3>Tổng quan</h3>
                             <div style="display: block; width: 100%;">
@@ -289,7 +235,7 @@ let section3 = ` <div class="row">
                                 </p>
                             </div>
                         </div>
-                        <div class="list">
+                        <div class="list" style="margin-top:25px">
                             <h3>15 SỰ KIỆN CHÍNH</h3>
                             <ul style="padding-left: 0;">
                                 <li>
@@ -365,11 +311,7 @@ let section3 = ` <div class="row">
                                     </p>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>`
+                        </div>`
 let section4 = `
         <h1></h1>
         <div class="row">
@@ -377,7 +319,7 @@ let section4 = `
                 <div class="ss3-box">
 
                     <img src="./images/vi-xuyen.jpg" alt="">
-                    <img src="./images/vi-xuyen.jpg" alt="">
+                    <img class="wow fadeInLeftO" src="./images/vi-xuyen.jpg" alt="">
 
                     <p>
                         Hơn 849.000 người con Việt Nam hy sinh, có khoảng 200.000 hài cốt Liệt sỹ chưa được tìm thấy và
@@ -386,19 +328,19 @@ let section4 = `
                 </div>
                 <div class="ss3-box">
                     <img src="./images/MVNAH.webp" alt="">
-                    <img src="./images/MVNAH.webp" alt="">
+                    <img class="wow fadeInLeftO" src="./images/MVNAH.webp" alt="">
                     <p style="flex-direction: column;justify-content: space-around;">
                         <span>Hơn 117.000 bà mẹ Việt Nam anh hùng, gần 800.000 thương binh và hơn 300.000 người có con
                             đẻ bị
                             nhiễm chất đọc da cam</span>
                         <span style="margin-left: 250px; color: rgb(204, 238, 136);">
-                            Tiễn con đi với hình hài đầy đủ<br>Đón con về đã hóa thành đất nước
+                            "Tiễn con đi với hình hài đầy đủ<br>Đón con về đã hóa thành đất nước"
                         </span>
                     </p>
                 </div>
                 <div class="ss3-box">
                     <img src="./images/130419ha45.jpg" alt="">
-                    <img src="./images/130419ha45.jpg" alt="">
+                    <img class="wow fadeInLeftO" src="./images/130419ha45.jpg" alt="">
                     <p>
                         Tất cả không chỉ đánh đổi bằng máu, mà còn là những nỗi đau âm thầm cho đến tận ngày nay
                     </p>
@@ -407,7 +349,7 @@ let section4 = `
                     <p
                         style="margin-top: 100px;margin-left: 200px;font-size: 22px; color: rgba(255, 255, 255, 0.874);text-shadow: 5px 5px 8px #ffc400cf;">
                         "Không có gì quý hơn độc lập, tự do..."</p>
-                    <img src="./images/LanhDao/Bac-Ho.png" alt="Bac-Ho">
+                    <img class="wow fadeInRightO" src="./images/LanhDao/Bac-Ho.png" alt="Bac-Ho">
                     <img style="position: absolute;z-index: -1;left:0;height:100%; opacity: 0.7;" src="./images/hinh-nen-co-viet-nam-cho-may-tinh-8.png" alt="Bac-Ho">
                 </div>
             </div>
@@ -432,63 +374,6 @@ function type3(textSs3) {
     } else {
         textSs3.style.borderRight = 'none';
     }
-}
-function setSection3() {
-    document.getElementById('titleH1').style.animation = ''
-    document.querySelector('#text-r-box').classList.add('to-none')
-    txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
-    document.querySelector('#titleH1').classList.remove('fadeInLeft')
-    document.querySelector('#titleH1').classList.add('fadeOutRight');
-    document.querySelector('#titleH1').classList.add('fadeOutRight');
-    setTimeout(() => {
-        document.querySelector('.section-two').innerHTML = section3
-    }, 1000);
-
-    isSection3 = true
-    setTimeout(() => {
-
-        isSection2 = false
-        const sections = document.querySelectorAll('body > section');
-        const thirdSection = sections[2];
-        thirdSection.classList.add('section-three')
-        thirdSection.innerHTML = section4
-
-
-        const audio = document.querySelector("#myAudio");
-        const playButton = document.querySelector("#audioSs3");
-        let isAudio = false
-        const textSs3 = document.getElementById('textSs3');
-
-
-
-        if (audio && playButton) {
-            playButton.addEventListener("click", function () {
-                if (!isAudio) {
-                    audio.play();
-                    playButton.textContent = 'Pause'
-                    isPlay = true
-                    isAudio = true
-                    type3(textSs3)
-                } else {
-                    audio.pause();
-                    playButton.textContent = 'Play'
-                    isAudio = false
-                    isPlay = false
-                }
-
-            });
-            audio.addEventListener("ended", function () {
-                playButton.textContent = 'Play';
-                isAudio = false;
-                isPlay = false;
-            });
-        }
-
-    }, 3000)
-    hasChanged = true;
-}
-function returnSs2(){
-    
 }
 
 
@@ -548,81 +433,258 @@ function type() {
     }
 }
 
-setTimeout(type, 2500);
+setTimeout(type, 1500);
 
 
 txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
 
 
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY == window.innerHeight && !hasChanged) {
-        isAtBottom = true;
-        window.scrollTo(0, window.innerHeight);
-    } else {
-        // isAtBottom = false;
+let hasChanged = false;
+let isSection1 = true
+let isSection2 = false
+let isSection3 = false
+let isSection4 = false
+let isSection5 = false
+function checkSs() {
+    if (window.scrollY == window.innerHeight && isSection1) {
+        isSection1 = false
+        isSection2 = true
     }
-});
-window.addEventListener('wheel', (event) => {
-    if (isAtBottom && event.deltaY > 0) {
-        if (isSection2 && !isSection3) {
-            setSection3()
+    if (window.scrollY < window.innerHeight && isSection2) {
+        isSection1 = true
+        isSection2 = false
+    }
 
-        } else if (!isSection2 && !isSection3) {
-            document.getElementById('titleH1').style.animation = ''
-            if (document.querySelector('.section-one')) {
-                document.querySelector('.section-one').innerHTML = ''
-                document.querySelector('.section-one').classList.remove('section-one')
-            }
-            document.querySelector('#text-r-box').classList.add('to-none')
-            txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
-            document.querySelector('#titleH1').classList.remove('fadeInLeft')
-            document.querySelector('#titleH1').classList.add('fadeOutRight');
-            setTimeout(() => {
-                document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow fadeInLeft" id="titleH1">
+
+}
+window.addEventListener('scroll', () => {
+    if (window.scrollY == window.innerHeight && isSection4) {
+        isSection5 = true
+        isSection4 = false
+    }
+    if (window.scrollY < window.innerHeight && isSection5) {
+        isSection4 = true
+        isSection5 = false
+    }
+})
+const imgTextA = document.querySelector('.text-two-l-a')
+const imgTextB = document.querySelector('.text-two-l-b')
+const imgTag = document.querySelectorAll('.painImg-l > img');
+const divTag = document.querySelectorAll('.painImg-l > div');
+imgTag[1].addEventListener('animationend',() => { imgTag[1].style.animation = '' })
+imgTag[2].addEventListener('animationend',() => { imgTag[2].style.animation = '' })
+imgTextA.addEventListener('animationend', () => { imgTextA.style.animation = '' })
+imgTextB.addEventListener('animationend', () => { imgTextB.style.animation = '' })
+function setOutText() {
+    imgTextA.classList.remove('fadeInRight')
+    imgTextA.classList.add('fadeOutRight')
+
+    document.querySelector('.text-two-l-b').classList.remove('fadeInLeft')
+    imgTextB.classList.add('fadeOutLeft')
+    imgTextA.innerHTML = `<div class="bgr-img-l"><img src="./images/background-giay-bao-cu-dep-nhat_080332437.jpg" alt="bgr">
+        </div>
+       <p>
+            <span>Tổng Bí thư Lê Duẩn:</span><br> "Chúng ta chào mừng Tổ quốc vinh quang của chúng ta từ nay
+          vĩnh viến thoát khỏi ách nô dịch của nước ngoài, vĩnh viễn thoát khỏi họa chia cắt, chào mừng
+           non sông gấm vốc Việt Nam liền một dải".
+        </p>
+        <p>
+           <span>Phóng viên Don North (ABC News):</span><br>"Khi chiếc xe tăng lao qua cánh cổng sắt, tôi
+             biết mình đang chứng kiến một giây phút lịch sử không chỉ của Việt Nam mà của cả thế giới".
+         </p>`
+    imgTextB.innerHTML = `<div class="bgr-img-l"><img src="./images/background-giay-bao-cu-dep-nhat_080332437.jpg" alt="bgr">
+        </div>
+        <p>
+            <span>Đại tướng Võ Nguyên Giáp:</span><br>"Ngày toàn thắng 30 tháng 4 năm 1975 đi vào lịch sử
+            như một sự kết thúc chiến lược vô song. Tổ quốc ta hoàn toàn đọc lập, thống nhất".
+        </p>
+        <p>
+            <span>Đại tướng Lê Đức Anh:</span><br>"Không chỉ có xe tăng vào Dinh, mà cả 5 hướng, cả lực
+            lượng tại chổ, đều cùng một lúc đội bão lửa vào sào huyệt cuối cùng của kẻ địch".
+        </p>
+        <p>
+            <span>Hãng Reuters(Anh):</span><br>"Khi chiếc cổng sắt tại Dinh Độc Lập bị xe tăng Quân Giải
+            phóng húc đổ... cờ ba sọc rơi xuống đất, cờ Giải phóng tung bay từ tầng hai"
+        </p>`
+
+
+    imgTag[1].classList.remove('fadeInRight')
+    imgTag[1].classList.add('fadeOutRight')
+    imgTag[2].classList.remove('fadeInLeft')
+    imgTag[2].classList.add('fadeOutLeft')
+    divTag[0].classList.remove('dt-vtd')
+    divTag[1].classList.remove('dt-ltt')
+    setTimeout(() => {
+            imgTag[1].classList.remove('fadeOutRight')
+    imgTag[2].classList.remove('fadeOutLeft')
+        imgTextA.classList.remove('fadeOutRight')
+        imgTextA.classList.add('fadeInRight')
+
+        imgTextB.classList.remove('fadeOutLeft')
+        imgTextB.classList.add('fadeInLeft')
+
+        imgTag[1].src = './images/LanhDao/Dai-tuong-Vo-Nguyen-Giáp.png'
+        imgTag[2].src = './images/LanhDao/Tong-bi-thu-Le-Duan.png'
+        imgTag[2].style.height = '20%';
+        imgTag[2].style.bottom = '20%';
+        imgTag[1].classList.add('fadeInRight')
+        imgTag[2].classList.add('fadeInLeft')
+        divTag[0].classList.add('dt-vng')
+        divTag[1].classList.add('tbt-ld')
+    }, 1000)
+
+}
+// function setInText(){}
+function setSs4() {
+
+    isSection3 = false
+    document.getElementById('titleH1').style.animation = ''
+    document.querySelector('#text-r-box').classList.add('to-none')
+    txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
+    document.querySelector('#titleH1').classList.remove('fadeInLeft')
+    document.querySelector('#titleH1').classList.add('fadeOutRight');
+    setOutText()
+    setTimeout(() => {
+        document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow animated fadeInLeft" id="titleH1">
+                       CHÍNH QUYỀN SÀI GÒN ĐẦU HÀNG VÔ ĐIỀU KIỆN<br>[26 - 28/4/1975]
+                    </h1>`;
+    }, 800);
+    setTimeout(() => {
+        document.querySelector('#text-r-box').classList.add('none-to')
+        document.getElementById('text-r-box').innerHTML = section3
+        txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
+        isSection4 = true
+    }, 1000);
+    setTimeout(() => {
+
+        isSection2 = false
+        const sections = document.querySelectorAll('body > section');
+        const thirdSection = sections[2];
+        thirdSection.classList.add('section-three')
+        thirdSection.innerHTML = section4
+
+
+        const audio = document.querySelector("#myAudio");
+        const playButton = document.querySelector("#audioSs3");
+        let isAudio = false
+        const textSs3 = document.getElementById('textSs3');
+
+
+
+        if (audio && playButton) {
+            playButton.addEventListener("click", function () {
+                if (!isAudio) {
+                    audio.play();
+                    playButton.textContent = 'Pause'
+                    isPlay = true
+                    isAudio = true
+                    type3(textSs3)
+                } else {
+                    audio.pause();
+                    playButton.textContent = 'Play'
+                    isAudio = false
+                    isPlay = false
+                }
+
+            });
+            audio.addEventListener("ended", function () {
+                playButton.textContent = 'Play';
+                isAudio = false;
+                isPlay = false;
+            });
+        }
+
+    }, 1000)
+}
+
+function returnSs3() {
+    isSection4 = false
+    document.querySelector('.section-three').innerHTML = ''
+    document.querySelector('.section-three').classList.remove('section-three')
+    document.getElementById('titleH1').style.animation = ''
+    document.querySelector('#text-r-box').classList.add('to-none')
+    txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
+    document.querySelector('#titleH1').classList.remove('fadeInLeft')
+    document.querySelector('#titleH1').classList.add('fadeOutRight');
+    setTimeout(() => {
+        document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow fadeInLeft" id="titleH1">
                         TỔNG TIẾN CÔNG SÀI GÒN,
 VÒNG VÂY NGÀY CẢNG SIẾT CHẶT<br>[29/4/1975]
                     </h1>`;
-            }, 800);
-            setTimeout(() => {
-                document.querySelector('#text-r-box').classList.add('none-to')
-                document.getElementById('text-r-box').innerHTML = section2_New
-                txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
-            }, 1000);
-            hasChanged = true;
-            setTimeout(() => {
+    }, 800);
+    setTimeout(() => {
+        document.querySelector('#text-r-box').classList.add('none-to')
+        document.getElementById('text-r-box').innerHTML = section2_New
+        txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
+    }, 1000);
 
-                isSection2 = true
-            }, 3000);
-        }
+    setTimeout(() => {
+        isSection3 = true
+    }, 1000);
+}
 
-    }
+function returnSs2() {
+    isSection3 = false
 
-    if (!isAtBottom && event.deltaY < 0 && hasChanged) {
-        document.getElementById('titleH1').style.animation = ''
+
+    document.querySelector('#text-r-box').classList.add('to-none')
+    txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
+    document.querySelector('#titleH1').classList.remove('fadeInLeft')
+    document.querySelector('#titleH1').classList.add('fadeOutRight');
+    setTimeout(() => {
+        document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow animated fadeInLeft" id="titleH1">
+                        TIẾN CÔNG BAO BÂY, CÔ LẬP SÀI GÒN<br>[26 - 28/4/1975]
+                    </h1>`;
+    }, 800);
+    setTimeout(() => {
+        document.querySelector('#text-r-box').classList.add('none-to')
+        document.getElementById('text-r-box').innerHTML = section2_Old
+        txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
+    }, 1000);
+    setTimeout(() => {
         document.querySelector('body > section').classList.add('section-one')
         window.scrollTo({
             top: window.innerHeight,
             left: 0,
             behavior: 'instant'
         });
+        document.querySelector('.section-one').innerHTML = section1
+        isSection2 = true
+    }, 1000);
+}
+
+
+window.addEventListener('wheel', (event) => {
+    checkSs()
+    if (isSection2 && event.deltaY > 0) {
+        isSection2 = false
+        document.getElementById('titleH1').style.animation = ''
+        if (document.querySelector('.section-one')) {
+            document.querySelector('.section-one').innerHTML = ''
+            document.querySelector('.section-one').classList.remove('section-one')
+        }
         document.querySelector('#text-r-box').classList.add('to-none')
         txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('to-none'); txtRBox.style.animation = '' })
-        document.querySelector('#titleH1').classList.add('fadeOutRight');
         document.querySelector('#titleH1').classList.remove('fadeInLeft')
+        document.querySelector('#titleH1').classList.add('fadeOutRight');
         setTimeout(() => {
-            document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow animated fadeInLeft" id="titleH1">
-                        TIẾN CÔNG BAO BÂY, CÔ LẬP SÀI GÒN<br>[26 - 28/4/1975]
+            document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow fadeInLeft" id="titleH1">
+                        TỔNG TIẾN CÔNG SÀI GÒN,
+VÒNG VÂY NGÀY CẢNG SIẾT CHẶT<br>[29/4/1975]
                     </h1>`;
-        }, 500);
+        }, 800);
         setTimeout(() => {
             document.querySelector('#text-r-box').classList.add('none-to')
-            document.getElementById('text-r-box').innerHTML = section2_Old
+            document.getElementById('text-r-box').innerHTML = section2_New
             txtRBox.addEventListener('animationend', () => { txtRBox.classList.remove('none-to'); txtRBox.style.animation = '' })
-        }, 2000);
-        hasChanged = false;
+        }, 1000);
+        setTimeout(() => {
+            isSection3 = true
+        }, 1000);
     }
-
+    if (window.scrollY == 0 && event.deltaY < 0 && isSection3) { returnSs2() }
+    if (window.scrollY == 0 && event.deltaY > 0 && isSection3) { setSs4() }
+    if (window.scrollY == 0 && event.deltaY < 0 && isSection4) { returnSs3() }
 })
 
 
@@ -630,11 +692,3 @@ let btnNextOne = document.getElementById("section-one-next")
 btnNextOne.addEventListener('click', () => {
     window.scrollTo(0, window.innerHeight);
 })
-
-
-
-
-
-
-
-
