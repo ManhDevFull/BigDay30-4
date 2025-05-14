@@ -1102,6 +1102,41 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: fadeInLeft;
 }
 
+@-webkit-keyframes fadeInLeftO {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 0.4;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftO {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 0.4;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeftO {
+  -webkit-animation-name: fadeInLeftO;
+  animation-name: fadeInLeftO;
+}
+
 @-webkit-keyframes fadeInLeftBig {
   0% {
     opacity: 0;
@@ -1170,6 +1205,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightO {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);transform: scaleX(-1);
+  }
+
+  100% {
+    opacity: 0.7;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);transform: scaleX(-1);
+  }
+}
+
+@keyframes fadeInRightO {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px) scaleX(-1);
+  }
+
+  100% {
+    opacity: 0.7;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0) scaleX(-1);
+  }
+}
+
+.fadeInRightO {
+  -webkit-animation-name: fadeInRightO;
+  animation-name: fadeInRightO;
+    
 }
 
 @-webkit-keyframes fadeInRightBig {
@@ -1762,8 +1833,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @-webkit-keyframes unflipInY {
   0% {
-    -webkit-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
+    -webkit-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
     opacity: 0;
   }
 
@@ -1776,9 +1849,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @keyframes unflipInY {
   0% {
-    -webkit-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    -ms-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
+    -webkit-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    -ms-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
     opacity: 0;
   }
 
@@ -1873,6 +1949,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+
 @-webkit-keyframes unflipOutY {
   0% {
     -webkit-transform: perspective(400px) rotateY(0deg);
@@ -1881,8 +1958,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   100% {
-    -webkit-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
+    -webkit-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
     opacity: 0;
   }
 }
@@ -1896,9 +1975,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   100% {
-    -webkit-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    -ms-transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
-    transform: perspective(400px) rotateY(-90deg); /* Đổi thành -90deg */
+    -webkit-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    -ms-transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
+    transform: perspective(400px) rotateY(-90deg);
+    /* Đổi thành -90deg */
     opacity: 0;
   }
 }
@@ -1910,6 +1992,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: flipOutY;
   animation-name: flipOutY;
 }
+
 .unflipOutY {
   -webkit-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
