@@ -546,7 +546,7 @@ function setSs4() {
     setOutText()
     setTimeout(() => {
         document.getElementsByClassName('painImg-r')[0].innerHTML = `<h1 class="wow animated fadeInLeft" id="titleH1">
-                       CHÍNH QUYỀN SÀI GÒN ĐẦU HÀNG VÔ ĐIỀU KIỆN<br>[26 - 28/4/1975]
+                       CHÍNH QUYỀN SÀI GÒN ĐẦU HÀNG VÔ ĐIỀU KIỆN<br>[30/4/1975]
                     </h1>`;
     }, 800);
     setTimeout(() => {
