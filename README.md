@@ -1,18 +1,25 @@
 # Website : Kỷ niệm 50 năm giải phóng
 
 ## Demo
-Video demo:
+Video demo:  
 
-Url demo:
+[![Video demo](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot1-min.png)](https://drive.google.com/file/d/1X4o3bLpPBJI3IlrR6WAxMw4NmLotuFNf/view?usp=sharing)  
+
+URL demo:  
 https://big-day30-4.vercel.app/
 
+Ảnh demo:  
+Screen1:  
+![Screen 1](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot1-min.png)  
+Screen2:  
+![Screen 2](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot2-min.png)  
+Screen3:  
+![Screen 3](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot3-min.png)  
+Screen4:  
+![Screen 4](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot4-min.png)  
+Screen5:  
+![Screen 5](https://github.com/ManhDevFull/BigDay30-4/blob/main/images/Screenshot5-min.png)  
 
-Ảnh demo:
-![Screen 1](https://github.com/KhoaCongNgheSoUTE/tkw25.nhom16/blob/main/images/readme/Screenshot1-min.png)
-![Screen 2](https://github.com/KhoaCongNgheSoUTE/tkw25.nhom16/blob/main/images/readme/Screenshot2-min.png)
-![Screen 3](https://github.com/KhoaCongNgheSoUTE/tkw25.nhom16/blob/main/images/readme/Screenshot3-min.png)
-![Screen 4](https://github.com/KhoaCongNgheSoUTE/tkw25.nhom16/blob/main/images/readme/Screenshot4-min.png)
-![Screen 5](https://github.com/KhoaCongNgheSoUTE/tkw25.nhom16/blob/main/images/readme/Screenshot5-min.png)
 ## Cài Đặt
 Hướng dẫn cách cài đặt dự án. Ví dụ:
 
